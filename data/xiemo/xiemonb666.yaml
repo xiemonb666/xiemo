@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-04-30 21:45:27
+# 创建时间：2023-04-30 21:48:42
 # 使用模版：V2RaySE 默认模版
-# 节点数量：1
+# 节点数量：2
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -22,6 +22,7 @@ dns:
 
 proxies:
   - {"name":"","type":"vmess","server":"34.124.230.85","port":32968,"cipher":"auto","uuid":"946e5f81-bb71-4fcb-eee0-25b03d5b6cf9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"test","type":"vless","server":"34.124.230.85","port":33358,"uuid":"62766d98-0cfa-43b3-8965-43847f340835","tls":false,"network":"tcp"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -29,6 +30,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - ''
+      - test
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -36,6 +38,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ''
+      - test
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -43,24 +46,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - ''
+      - test
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ''
+      - test
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - ''
+      - test
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ''
+      - test
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -84,6 +91,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - ''
+      - test
 
 rules:
 # 本地/局域网地址
