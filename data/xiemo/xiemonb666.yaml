@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-05-01 13:50:52
+# 创建时间：2023-05-01 15:32:54
 # 使用模版：V2RaySE 默认模版
-# 节点数量：1
+# 节点数量：3
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,46 +21,60 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"clash.ktq.ltd:443","type":"trojan","server":"clash.ktq.ltd","port":443,"udp":true,"password":"xiemo59444880","skip-cert-verify":true}
+  - {"name":"HK","type":"vmess","server":"34.92.210.59","port":35474,"cipher":"auto","uuid":"3a265c69-2652-44dc-87a1-c1df9b950acb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"clash.ktq.ltd:443-1","type":"trojan","server":"clash.ktq.ltd","port":443,"udp":true,"password":"xiemonb666","skip-cert-verify":true}
+  - {"name":"clash.ktq.ltd:443-2","type":"trojan","server":"clash.ktq.ltd","port":443,"udp":true,"password":"xiemo59444880","skip-cert-verify":true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - clash.ktq.ltd:443
+      - HK
+      - clash.ktq.ltd:443-1
+      - clash.ktq.ltd:443-2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - clash.ktq.ltd:443
+      - HK
+      - clash.ktq.ltd:443-1
+      - clash.ktq.ltd:443-2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - clash.ktq.ltd:443
+      - HK
+      - clash.ktq.ltd:443-1
+      - clash.ktq.ltd:443-2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - clash.ktq.ltd:443
+      - HK
+      - clash.ktq.ltd:443-1
+      - clash.ktq.ltd:443-2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - clash.ktq.ltd:443
+      - HK
+      - clash.ktq.ltd:443-1
+      - clash.ktq.ltd:443-2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - clash.ktq.ltd:443
+      - HK
+      - clash.ktq.ltd:443-1
+      - clash.ktq.ltd:443-2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -83,7 +97,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - clash.ktq.ltd:443
+      - HK
+      - clash.ktq.ltd:443-1
+      - clash.ktq.ltd:443-2
 
 rules:
 # 本地/局域网地址
