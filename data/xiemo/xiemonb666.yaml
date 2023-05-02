@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-05-02 11:36:00
+# 创建时间：2023-05-02 11:39:47
 # 使用模版：V2RaySE 默认模版
-# 节点数量：2
+# 节点数量：1
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -22,7 +22,6 @@ dns:
 
 proxies:
   - {"name":"clash.ktq.ltd:443","type":"trojan","server":"clash.ktq.ltd","port":443,"udp":true,"password":"xiemonb666","skip-cert-verify":true}
-  - {"name":"HK-CDN","type":"vmess","server":"35.198.203.105","port":80,"cipher":"auto","uuid":"488ef39f-54c7-4fda-9f8e-f74e678db28d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/angie"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -30,7 +29,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - clash.ktq.ltd:443
-      - HK-CDN
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -38,7 +36,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - clash.ktq.ltd:443
-      - HK-CDN
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -46,28 +43,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - clash.ktq.ltd:443
-      - HK-CDN
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - clash.ktq.ltd:443
-      - HK-CDN
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - clash.ktq.ltd:443
-      - HK-CDN
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - clash.ktq.ltd:443
-      - HK-CDN
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -91,7 +84,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - clash.ktq.ltd:443
-      - HK-CDN
 
 rules:
 # 本地/局域网地址
